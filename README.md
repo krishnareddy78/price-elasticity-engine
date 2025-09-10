@@ -85,4 +85,4 @@ This engine provides a strong foundation for a production-ready pricing system. 
 
 ---
 
-✨ With this system, you’re not just estimating demand — you’re building a deployable engine that optimizes **profit-driven pricing decisions**.
+With this system, you’re not just estimating demand — you’re building a deployable engine that optimizes **profit-driven pricing decisions**.
