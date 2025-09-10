@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  api:
+    build: .
+    container_name: price_engine_api
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    # Use the factory pattern for reloading in development
+    command: uvicorn api:create_app --host 0.0.0.0 --port 8000 --reload --factory
