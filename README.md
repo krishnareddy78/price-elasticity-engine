@@ -55,26 +55,37 @@ Where P is price, C is marginal cost, and Q(P) is the quantity predicted by our 
     ```
 
 ## Project Structure
-├── price_engine/           # Main Python package
-│   ├── init.py
-│   ├── data_simulator.py   # Advanced data simulation
-│   ├── models.py           # Base model class and all implementations
-│   └── optimizer.py        # Profit optimization logic
-├── tests/                  # Pytest unit tests
-├── .github/workflows/      # CI workflow for GitHub Actions
-│   └── ci.yml
-├── api.py                  # FastAPI application
-├── Dockerfile              # Production Docker instructions
-├── docker-compose.yml      # Docker compose for easy development
-├── requirements.txt        # Python dependencies
+price-elasticity-engine/
+├── price_engine/ # Main Python package
+│ ├── init.py
+│ ├── data_simulator.py # Advanced data simulation
+│ ├── models.py # Base model class + all implementations
+│ └── optimizer.py # Profit optimization logic
+│
+├── tests/ # Pytest unit tests
+│
+├── .github/workflows/ # GitHub Actions CI workflow
+│ └── ci.yml
+│
+├── api.py # FastAPI application
+├── Dockerfile # Production Docker instructions
+├── docker-compose.yml # Docker Compose for local development
+├── requirements.txt # Python dependencies
+│
 └── examples/
-└── full_workflow.ipynb # Notebook for demonstration
+└── full_workflow.ipynb # Notebook demonstrating full workflow
 
-## Future Work & Potential Extensions
+---
 
-This engine provides a robust foundation for a production-ready pricing system. Potential future enhancements include:
+## 🔮 Future Work & Potential Extensions
 
-* **Integrate a Feature Store**: Connect the model to a feature store for real-time feature retrieval.
-* **Model Orchestration**: Use a tool like **Airflow** or **Kubeflow Pipelines** to automate the retraining and evaluation of models on a schedule.
-* **Bayesian Models**: Implement a Bayesian model to provide a probability distribution for the optimal price, better quantifying uncertainty for stakeholders.
-* **Cross-Elasticity**: Extend the models to account for the impact of one product's price on the sales of another (cannibalization and halo effects).
+This engine provides a strong foundation for a production-ready pricing system. Potential enhancements include:
+
+- **Feature Store Integration** → Connect models to a feature store for real-time feature retrieval.  
+- **Model Orchestration** → Use tools like **Airflow** or **Kubeflow Pipelines** for automated retraining.  
+- **Bayesian Models** → Provide probability distributions for optimal prices to better quantify uncertainty.  
+- **Cross-Elasticity Analysis** → Extend models to account for product interactions (cannibalization & halo effects).  
+
+---
+
+✨ With this system, you’re not just estimating demand — you’re building a deployable engine that optimizes **profit-driven pricing decisions**.
