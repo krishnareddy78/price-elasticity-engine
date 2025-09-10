@@ -1,4 +1,4 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 
 setup(
     name="price_engine",
@@ -7,7 +7,7 @@ setup(
     description="An advanced, end-to-end engine for price elasticity modeling and profit optimization.",
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
-    packages=find_packages(),
+    packages=['price_engine'], 
     install_requires=[
         "numpy",
         "pandas",
