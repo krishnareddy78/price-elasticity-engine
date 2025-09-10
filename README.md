@@ -55,3 +55,26 @@ Where P is price, C is marginal cost, and Q(P) is the quantity predicted by our 
     ```
 
 ## Project Structure
+├── price_engine/           # Main Python package
+│   ├── init.py
+│   ├── data_simulator.py   # Advanced data simulation
+│   ├── models.py           # Base model class and all implementations
+│   └── optimizer.py        # Profit optimization logic
+├── tests/                  # Pytest unit tests
+├── .github/workflows/      # CI workflow for GitHub Actions
+│   └── ci.yml
+├── api.py                  # FastAPI application
+├── Dockerfile              # Production Docker instructions
+├── docker-compose.yml      # Docker compose for easy development
+├── requirements.txt        # Python dependencies
+└── examples/
+└── full_workflow.ipynb # Notebook for demonstration
+
+## Future Work & Potential Extensions
+
+This engine provides a robust foundation for a production-ready pricing system. Potential future enhancements include:
+
+* **Integrate a Feature Store**: Connect the model to a feature store for real-time feature retrieval.
+* **Model Orchestration**: Use a tool like **Airflow** or **Kubeflow Pipelines** to automate the retraining and evaluation of models on a schedule.
+* **Bayesian Models**: Implement a Bayesian model to provide a probability distribution for the optimal price, better quantifying uncertainty for stakeholders.
+* **Cross-Elasticity**: Extend the models to account for the impact of one product's price on the sales of another (cannibalization and halo effects).
