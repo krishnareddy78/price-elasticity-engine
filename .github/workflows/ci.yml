@@ -18,10 +18,10 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        # This next line installs your actual price_engine package
-        pip install -e .
-        # This line installs all other requirements for testing
+        # FIRST, install all the library requirements
         pip install -r requirements.txt
+        # THEN, install our local package, which depends on them
+        pip install -e .
     - name: Run tests with pytest
       run: |
         pytest
