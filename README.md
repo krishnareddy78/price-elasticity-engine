@@ -55,29 +55,26 @@ Where P is price, C is marginal cost, and Q(P) is the quantity predicted by our 
     ```
 
 ## Project Structure
-price-elasticity-engine/
-├── price_engine/ # Main Python package
-│ ├── init.py
-│ ├── data_simulator.py # Advanced data simulation
-│ ├── models.py # Base model class + all implementations
-│ └── optimizer.py # Profit optimization logic
-│
-├── tests/ # Pytest unit tests
-│
-├── .github/workflows/ # GitHub Actions CI workflow
-│ └── ci.yml
-│
-├── api.py # FastAPI application
-├── Dockerfile # Production Docker instructions
-├── docker-compose.yml # Docker Compose for local development
-├── requirements.txt # Python dependencies
-│
-└── examples/
-└── full_workflow.ipynb # Notebook demonstrating full workflow
+## Project Structure
 
----
+- **price-elasticity-engine/**
+  - **price_engine/**
+    - `__init__.py`
+    - `data_simulator.py` — advanced data simulation
+    - `models.py` — base model + implementations
+    - `optimizer.py` — profit optimization logic
+  - `tests/` — pytest unit tests
+  - `.github/workflows/`
+    - `ci.yml` — GitHub Actions CI workflow
+  - `api.py` — FastAPI application
+  - `Dockerfile`
+  - `docker-compose.yml`
+  - `requirements.txt`
+  - `examples/`
+    - `full_workflow.ipynb` — demonstration notebook
 
-## 🔮 Future Work & Potential Extensions
+
+## Future Work & Potential Extensions
 
 This engine provides a strong foundation for a production-ready pricing system. Potential enhancements include:
 
