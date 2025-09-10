@@ -1,0 +1,16 @@
+# Core application
+fastapi
+uvicorn[standard]
+numpy
+pandas
+scikit-learn
+statsmodels
+xgboost
+pygam # For Generalized Additive Models
+
+# For development and testing
+pytest
+jupyterlab
+matplotlib
+seaborn
+requests
