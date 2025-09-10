@@ -4,7 +4,7 @@ This project is a production-ready, end-to-end system for solving one of the mos
 
 The engine simulates realistic sales data with confounding variables like seasonality and promotions, then trains a suite of models—from interpretable Log-Log regression to flexible GAMs and powerful XGBoost models—to capture the complex price-demand relationship. The core of the project is a REST API built with FastAPI that takes a product's marginal cost and returns the optimal, profit-maximizing price. The entire application is containerized with Docker and includes a full suite of unit tests with CI/CD via GitHub Actions, demonstrating a commitment to building robust and deployable data science products.
 
-## 核心 Project Workflow
+## Project Workflow
 
 1.  **Realistic Data Simulation**: A simulator generates sales data with multiple real-world factors: price fluctuations, seasonality, holidays, and promotional events.
 2.  **Multi-Model Training & Evaluation**: The system trains and evaluates a suite of models to capture the price-demand relationship, each with different trade-offs:
@@ -15,7 +15,7 @@ The engine simulates realistic sales data with confounding variables like season
 4.  **Containerization**: The entire application is containerized with Docker, ensuring reproducible and seamless deployment.
 5.  **Unit Testing & CI**: The project includes a suite of `pytest` unit tests and a GitHub Actions workflow for continuous integration, guaranteeing code reliability.
 
-## 📈 Economic & Statistical Foundation
+## Economic & Statistical Foundation
 
 While a simple log-log model provides a direct elasticity estimate ($\ln(Q) \sim \beta_1 \ln(P)$), its accuracy can be compromised by omitted-variable bias. This engine controls for such factors by incorporating them into the models:
 
@@ -29,7 +29,7 @@ $$ \pi(P) = (P - C) \cdot Q(P) $$
 
 Where $P$ is price, $C$ is marginal cost, and $Q(P)$ is the quantity predicted by our model at that price. Our API finds the price $P$ that maximizes this function.
 
-## 🚀 How to Use
+## How to Use
 
 1.  **Clone the repository:**
     ```bash
@@ -50,4 +50,4 @@ Where $P$ is price, $C$ is marginal cost, and $Q(P)$ is the quantity predicted b
     pytest
     ```
 
-## 📂 Project Structure
+## Project Structure
