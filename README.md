@@ -17,25 +17,17 @@ The engine simulates realistic sales data with confounding variables like season
 
 ## Economic & Statistical Foundation
 
-While a simple log-log model provides a direct elasticity estimate ($\ln(Q) \sim \beta_1 \ln(P)$), its accuracy can be compromised by omitted-variable bias. This engine controls for such factors by incorporating them into the models:
+While a simple log-log model provides a direct elasticity estimate (ln(Q) ≈ β₁ ln(P)), its accuracy can be compromised by omitted-variable bias. This engine controls for such factors by incorporating them into the models:
+ln(Q_d) = β₀ + β₁ ln(P) + β₂ · is_promo + f(day_of_year) + ε
 
-<div align="center">
 
-$\ln(Q_d) = \beta_0 + \beta_1 \ln(P) + \beta_2 \cdot \text{is\_promo} + f(\text{day\_of\_year}) + \epsilon$
+Here, f(day_of_year) represents a smooth function for seasonality, handled effectively by a GAM.
 
-</div>
+The ultimate business goal is often profit, not revenue. Profit (π) is defined as:
+π(P) = (P - C) · Q(P)
 
-Here, $f(\text{day\_of\_year})$ represents a smooth function for seasonality, handled effectively by a GAM.
 
-The ultimate business goal is often profit, not revenue. Profit ($\pi$) is defined as:
-
-<div align="center">
-
-$\pi(P) = (P - C) \cdot Q(P)$
-
-</div>
-
-Where $P$ is price, $C$ is marginal cost, and $Q(P)$ is the quantity predicted by our model at that price. Our API finds the price $P$ that maximizes this function.
+Where P is price, C is marginal cost, and Q(P) is the quantity predicted by our model at that price. Our API finds the price P that maximizes this function.
 
 ## How to Use
 
@@ -59,3 +51,6 @@ Where $P$ is price, $C$ is marginal cost, and $Q(P)$ is the quantity predicted b
     ```
 
 ## Project Structure
+
+
+
